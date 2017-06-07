@@ -1,9 +1,3 @@
-2017-06-06 17:58:29.421 [INFO ]  [pool-2-thread-3] ClassWithSynchronizeMethod - Person{id=2, firstname='Adam', lastname='Jurkiewicz', nickname='Juras'}
-2017-06-06 17:58:29.428 [INFO ]  [pool-2-thread-4] ClassWithSynchronizeMethod - Person{id=3, firstname='Michal', lastname='Kitajewski', nickname='Kita'}
-2017-06-06 17:58:29.429 [INFO ]  [pool-2-thread-1] ClassWithSynchronizeMethod - Person{id=2, firstname='Adam', lastname='Jurkiewicz', nickname='Juras'}
-2017-06-06 17:58:39.431 [INFO ]  [pool-2-thread-3] ClassWithSynchronizeMethod - Person{id=1, firstname='Jan', lastname='Kowalski', nickname='Kowal'}
-2017-06-06 17:58:39.431 [INFO ]  [pool-2-thread-1] ClassWithSynchronizeMethod - Person{id=3, firstname='Michal', lastname='Kitajewski', nickname='Kita'}
-2017-06-06 17:58:39.431 [INFO ]  [pool-2-thread-4] ClassWithSynchronizeMethod - Person{id=2, firstname='Adam', lastname='Jurkiewicz', nickname='Juras'}
-2017-06-06 17:58:49.438 [INFO ]  [pool-2-thread-1] ClassWithSynchronizeMethod - Person{id=4, firstname='Waclaw', lastname='Wasilewski', nickname='Wasyl'}
-2017-06-06 17:58:49.438 [INFO ]  [pool-2-thread-4] ClassWithSynchronizeMethod - Person{id=3, firstname='Michal', lastname='Kitajewski', nickname='Kita'}
-2017-06-06 17:58:49.438 [INFO ]  [pool-2-thread-3] ClassWithSynchronizeMethod - Person{id=1, firstname='Jan', lastname='Kowalski', nickname='Kowal'}
+2017-06-07 17:10:38.818 [INFO ]  [pool-3-thread-4] Consumer - Person{id=4, firstname='Waclaw', lastname='Wasilewski', nickname='Wasyl'}
+2017-06-07 17:10:38.818 [INFO ]  [pool-3-thread-2] Consumer - Person{id=4, firstname='Waclaw', lastname='Wasilewski', nickname='Wasyl'}
+2017-06-07 17:10:38.818 [INFO ]  [pool-3-thread-3] Consumer - Person{id=3, firstname='Michal', lastname='Kitajewski', nickname='Kita'}

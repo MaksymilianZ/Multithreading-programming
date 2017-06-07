@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+import java.util.Random;
 
 /**
  * Created by Maksymilian on 2017-06-03.
@@ -15,24 +17,27 @@ import java.util.List;
 @Component
 public class DownloadDataRunnable implements Runnable {
 
-    private final PersonRepository personRepository;
+    private PersonRepository personRepository;
 
     @Autowired
     public DownloadDataRunnable(PersonRepository personRepository) {
         this.personRepository=personRepository;
     }
 
-    private List<Person> brands = new ArrayList<>();
-
-    public List<Person> getBrands() {
-        return brands;
-    }
+    private List<Person> synchronizedList = new ArrayList<>();
 
     @Override
     public  void run(){
-        synchronized (brands) {
-            List<Person> persons = personRepository.findAll();
-            brands.addAll(persons);
+        List<Person> persons = personRepository.findAll();
+        synchronized (synchronizedList) {
+            synchronizedList.clear();
+            synchronizedList.addAll(persons);
+        }
+    }
+
+    public Person getPerson() {
+        synchronized(synchronizedList) {
+            return synchronizedList.get(new Random().nextInt(synchronizedList.size()));
         }
     }
 }
